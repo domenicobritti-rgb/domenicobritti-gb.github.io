@@ -184,6 +184,22 @@
       padding: 34px;
     }
 
+
+    .profile-photo {
+      width: min(240px, 70vw);
+      height: min(240px, 70vw);
+      object-fit: cover;
+      object-position: center;
+      border-radius: 28px;
+      margin: 0 auto 24px;
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16);
+    }
+
+    .hero-visual.photo-card {
+      background: linear-gradient(135deg, #ecfdf5 0%, #f8fafc 58%, #ffffff 100%);
+    }
+
     .big-icon {
       width: 82px;
       height: 82px;
@@ -477,9 +493,9 @@
         </div>
 
         <aside class="hero-card" aria-label="Sintesi della pagina">
-          <div class="hero-visual">
+          <div class="hero-visual photo-card">
             <div>
-              <div class="big-icon" aria-hidden="true">🔬</div>
+              <img src="foto-profilo.jpg" alt="Ritratto del Prof. Domenico Britti" class="profile-photo">
               <strong>Farmaco veterinario, ambiente e One Health</strong>
               <p>
                 Una prospettiva scientifica integrata sui rapporti tra medicinali veterinari, salute animale, ambiente, sicurezza alimentare e sanità pubblica.
