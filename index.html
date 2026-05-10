@@ -1,783 +1,682 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Prof. Domenico Britti - Farmacologia e Tossicologia Veterinaria, One Health, tossicologia ambientale, farmaco veterinario e sostenibilità." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prof. Domenico Britti | Farmacologia, Tossicologia Veterinaria e One Health</title>
+  <meta name="description" content="Pagina professionale del Prof. Domenico Britti: farmacologia e tossicologia veterinaria, One Health, farmaco veterinario, contaminanti emergenti, didattica e ricerca.">
+  <meta name="author" content="Prof. Domenico Britti">
+  <meta property="og:title" content="Prof. Domenico Britti">
+  <meta property="og:description" content="Farmacologia e Tossicologia Veterinaria · One Health · Scienza regolatoria">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#047857">
 
   <style>
     :root {
-      --bg: #f4f7f4;
-      --surface: #ffffff;
-      --surface-soft: #eef5f1;
-      --text: #17211d;
-      --muted: #5f6f67;
-      --primary: #1f6f5b;
-      --primary-dark: #164f42;
-      --accent: #b68a3a;
-      --border: #dce7e0;
-      --shadow: 0 18px 45px rgba(23, 33, 29, 0.10);
-      --radius: 22px;
-      --max-width: 1120px;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --ink: #020617;
+      --text: #334155;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --green: #047857;
+      --green-dark: #065f46;
+      --green-soft: #ecfdf5;
+      --slate: #0f172a;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.08);
+      --shadow-xl: 0 24px 60px rgba(15, 23, 42, 0.14);
+      --radius-xl: 22px;
+      --radius-2xl: 32px;
+      --max: 1120px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(31, 111, 91, 0.14), transparent 34rem),
-        linear-gradient(180deg, #f8faf8 0%, var(--bg) 100%);
-      color: var(--text);
+        radial-gradient(circle at top right, rgba(16,185,129,0.18), transparent 35%),
+        linear-gradient(180deg, #f8fafc 0%, #ffffff 45%, #ecfdf5 100%);
       line-height: 1.6;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      width: min(var(--max-width), calc(100% - 2rem));
-      margin: 0 auto;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(248, 250, 248, 0.92);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.86);
+      backdrop-filter: blur(12px);
     }
 
     .nav {
-      min-height: 72px;
+      max-width: var(--max);
+      margin: 0 auto;
+      height: 66px;
+      padding: 0 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.5rem;
     }
 
     .brand {
       font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+      color: var(--ink);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #475569;
     }
 
-    .nav-links a {
-      color: var(--muted);
-      padding: 0.55rem 0.78rem;
-      border-radius: 999px;
-      font-size: 0.94rem;
-      font-weight: 650;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus {
-      color: var(--primary-dark);
-      background: var(--surface-soft);
-      text-decoration: none;
-    }
+    .nav-links a:hover { color: var(--green); }
 
     .hero {
-      padding: 5.5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-grid {
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 92px 24px 88px;
       display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
-      gap: 3rem;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 48px;
       align-items: center;
     }
 
-    .eyebrow {
+    .pill {
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
-      color: var(--primary-dark);
-      background: var(--surface-soft);
-      border: 1px solid var(--border);
+      gap: 9px;
+      padding: 9px 15px;
       border-radius: 999px;
-      padding: 0.45rem 0.8rem;
-      font-weight: 750;
-      font-size: 0.88rem;
-      margin-bottom: 1.2rem;
-    }
-
-    h1,
-    h2,
-    h3 {
-      line-height: 1.14;
-      margin: 0;
-      color: var(--text);
+      border: 1px solid #d1fae5;
+      background: rgba(255,255,255,0.92);
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
     }
 
     h1 {
-      font-size: clamp(2.6rem, 6vw, 5.1rem);
-      letter-spacing: -0.06em;
-      margin-bottom: 1.1rem;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 3.2vw, 2.65rem);
-      letter-spacing: -0.04em;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      font-size: 1.18rem;
-      margin-bottom: 0.6rem;
-    }
-
-    p {
       margin: 0;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.03;
+      letter-spacing: -0.06em;
+      color: var(--ink);
     }
 
-    .lead {
-      max-width: 66ch;
-      color: var(--muted);
-      font-size: 1.18rem;
+    .hero-text {
+      margin-top: 22px;
+      font-size: clamp(20px, 2vw, 26px);
+      color: #334155;
+      line-height: 1.45;
     }
 
-    .cta-row {
+    .actions {
+      margin-top: 32px;
       display: flex;
-      gap: 0.8rem;
       flex-wrap: wrap;
-      margin-top: 2rem;
+      gap: 14px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 999px;
-      padding: 0.85rem 1.25rem;
+      gap: 9px;
+      border-radius: 18px;
+      padding: 13px 20px;
       font-weight: 800;
-      border: 1px solid transparent;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
     }
+
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
-      background: var(--primary);
-      color: #ffffff;
-      box-shadow: 0 10px 24px rgba(31, 111, 91, 0.22);
+      background: var(--green);
+      color: white;
+      box-shadow: var(--shadow-sm);
     }
 
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      text-decoration: none;
-    }
+    .btn-primary:hover { background: var(--green-dark); }
 
     .btn-secondary {
-      background: var(--surface);
-      color: var(--primary-dark);
-      border-color: var(--border);
+      background: white;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
     }
 
-    .btn-secondary:hover {
-      border-color: var(--primary);
-      text-decoration: none;
-    }
+    .btn-secondary:hover { border-color: #6ee7b7; }
 
     .hero-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: calc(var(--radius) + 8px);
-      box-shadow: var(--shadow);
-      overflow: hidden;
+      border-radius: var(--radius-2xl);
+      background: rgba(255,255,255,0.88);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-xl);
+      padding: 28px;
     }
 
-    .hero-card img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 1 / 1;
+    .hero-visual {
+      min-height: 470px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #d1fae5 0%, #f1f5f9 52%, #ffffff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 34px;
+    }
+
+
+    .profile-photo {
+      width: min(240px, 70vw);
+      height: min(240px, 70vw);
       object-fit: cover;
+      object-position: center;
+      border-radius: 28px;
+      margin: 0 auto 24px;
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16);
     }
 
-    .hero-card-body {
-      padding: 1.25rem;
+    .hero-visual.photo-card {
+      background: linear-gradient(135deg, #ecfdf5 0%, #f8fafc 58%, #ffffff 100%);
     }
 
-    .hero-card-body strong {
+    .big-icon {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 20px;
+      border-radius: 24px;
+      background: rgba(4,120,87,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      color: var(--green);
+    }
+
+    .hero-visual strong {
       display: block;
-      color: var(--primary-dark);
-      font-size: 1.06rem;
-      margin-bottom: 0.35rem;
+      font-size: 26px;
+      line-height: 1.25;
+      color: var(--ink);
+      letter-spacing: -0.03em;
     }
 
-    .hero-card-body span {
-      color: var(--muted);
-      font-size: 0.96rem;
+    .hero-visual p {
+      margin: 18px auto 0;
+      max-width: 360px;
+      color: #475569;
     }
 
-    section {
-      scroll-margin-top: 95px;
-      padding: 4rem 0;
+    .section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 68px 24px;
     }
 
-    .section-kicker {
-      color: var(--accent);
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--green);
       text-transform: uppercase;
-      letter-spacing: 0.11em;
-      font-size: 0.78rem;
-      font-weight: 850;
-      margin-bottom: 0.65rem;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .24em;
     }
 
-    .section-intro {
-      color: var(--muted);
-      max-width: 72ch;
-      font-size: 1.04rem;
-      margin-bottom: 1.7rem;
+    h2 {
+      margin: 0 0 30px;
+      font-size: clamp(31px, 4vw, 44px);
+      line-height: 1.13;
+      letter-spacing: -0.045em;
+      color: var(--ink);
     }
 
-    .grid-3,
-    .grid-2 {
-      display: grid;
-      gap: 1rem;
+    h3 {
+      margin: 0 0 10px;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.25;
     }
+
+    p { margin: 0; }
 
     .grid-3 {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
     .grid-2 {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
     }
 
     .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.35rem;
-      box-shadow: 0 10px 28px rgba(23, 33, 29, 0.055);
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .18s ease, box-shadow .18s ease;
     }
 
-    .card .icon {
-      width: 2.2rem;
-      height: 2.2rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.8rem;
-      background: var(--surface-soft);
-      color: var(--primary-dark);
-      margin-bottom: 1rem;
-      font-weight: 900;
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
 
-    .card p,
-    .card li {
-      color: var(--muted);
-    }
-
-    .clean-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 0;
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    .clean-list li {
-      display: flex;
-      gap: 0.6rem;
-      align-items: flex-start;
-    }
-
-    .clean-list li::before {
-      content: "✓";
-      color: var(--primary);
-      font-weight: 900;
-      line-height: 1.6;
-    }
-
-    .publications {
-      background: rgba(255, 255, 255, 0.45);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .publication-group {
-      margin-top: 2rem;
-    }
-
-    .publication-group h3 {
-      color: var(--primary-dark);
-      margin-bottom: 1rem;
-    }
-
-    .publication-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 1rem;
-    }
-
-    .publication-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 5px solid var(--primary);
-      border-radius: 18px;
-      padding: 1.1rem 1.25rem;
-      box-shadow: 0 10px 26px rgba(23, 33, 29, 0.06);
-    }
-
-    .publication-card p {
+    .card p, .card div {
       color: var(--text);
     }
 
-    .publication-card em {
-      display: block;
-      margin: 0.25rem 0;
-      color: #25332d;
-    }
-
-    .doi {
-      display: inline-flex;
+    .iconbox {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: var(--green-soft);
+      color: var(--green);
+      display: flex;
       align-items: center;
-      width: fit-content;
-      margin-top: 0.65rem;
-      padding: 0.34rem 0.62rem;
-      border-radius: 999px;
-      background: var(--surface-soft);
-      color: var(--primary-dark);
-      font-weight: 800;
-      font-size: 0.9rem;
+      justify-content: center;
+      font-size: 23px;
+      margin-bottom: 18px;
     }
 
-    .doi:hover {
-      background: #e2efe8;
-      text-decoration: none;
+    .dark-panel {
+      border-radius: 28px;
+      background: var(--slate);
+      color: white;
+      padding: 38px;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .dark-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .dark-panel h3 { color: white; font-size: 28px; }
+    .dark-panel p { color: #cbd5e1; }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .topic {
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 18px;
+      color: #f8fafc;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .publication {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: white;
+      padding: 19px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .publication-title {
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    .publication-note {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .contact {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 68px 24px 96px;
     }
 
     .contact-panel {
-      background: var(--primary-dark);
-      color: #ffffff;
-      border-radius: calc(var(--radius) + 6px);
-      padding: 2rem;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius-2xl);
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-xl);
+      padding: 44px;
+      text-align: center;
     }
 
-    .contact-panel h2,
-    .contact-panel p {
-      color: #ffffff;
+    .contact-panel p.main {
+      margin: 18px auto 0;
+      max-width: 780px;
+      color: var(--text);
+      font-size: 18px;
     }
 
-    .contact-panel p {
-      opacity: 0.88;
-    }
 
-    .link-row {
+    .profile-links {
+      margin-top: 26px;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.65rem;
-      margin-top: 1.4rem;
+      justify-content: center;
+      gap: 12px;
     }
 
-    .link-row a {
-      background: rgba(255, 255, 255, 0.12);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      padding: 0.55rem 0.75rem;
+    .profile-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 999px;
-      font-weight: 750;
+      padding: 10px 15px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 14px;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
     }
 
-    .link-row a:hover {
-      background: rgba(255, 255, 255, 0.18);
-      text-decoration: none;
+    .profile-link:hover {
+      transform: translateY(-1px);
+      border-color: #6ee7b7;
+      background: #ecfdf5;
     }
 
-    footer {
-      padding: 2rem 0 2.5rem;
-      color: var(--muted);
-      font-size: 0.95rem;
+    .footer {
+      border-top: 1px solid var(--line);
+      background: white;
     }
 
-    .footer-row {
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 24px;
       display: flex;
       justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      border-top: 1px solid var(--border);
-      padding-top: 1.4rem;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
     }
 
     @media (max-width: 860px) {
-      .nav {
-        align-items: flex-start;
-        padding: 1rem 0;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-      }
-
-      .hero {
-        padding-top: 3.8rem;
-      }
-
-      .hero-grid,
-      .grid-2,
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
+      .nav { height: auto; padding: 18px 24px; align-items: flex-start; }
+      .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; padding-top: 64px; }
+      .hero-visual { min-height: 330px; }
+      .grid-3, .grid-2, .dark-grid, .topic-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; }
+      .contact-panel { padding: 30px 22px; }
     }
 
-    @media (max-width: 520px) {
-      .container {
-        width: min(100% - 1.25rem, var(--max-width));
-      }
-
-      section {
-        padding: 3rem 0;
-      }
-
-      .card,
-      .publication-card,
-      .contact-panel {
-        padding: 1rem;
-      }
-
-      .nav-links a {
-        padding: 0.45rem 0.58rem;
-      }
+    @media print {
+      .site-header, .actions { display: none; }
+      body { background: white; }
+      .card, .publication, .dark-panel, .contact-panel, .hero-card { box-shadow: none; }
+      .dark-panel { color: var(--ink); background: white; border: 1px solid var(--line); }
+      .dark-panel h3, .dark-panel p, .topic { color: var(--ink); }
+      .topic { background: white; border: 1px solid var(--line); }
     }
   </style>
 </head>
 
 <body>
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Torna all'inizio">Domenico Britti</a>
-
-      <nav class="nav-links" aria-label="Navigazione principale">
+    <nav class="nav" aria-label="Navigazione principale">
+      <a href="#home" class="brand">Domenico Britti</a>
+      <div class="nav-links">
         <a href="#profilo">Profilo</a>
         <a href="#ricerca">Ricerca</a>
         <a href="#didattica">Didattica</a>
         <a href="#pubblicazioni">Pubblicazioni</a>
         <a href="#progetti">Progetti</a>
         <a href="#contatti">Contatti</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-inner">
         <div>
-          <div class="eyebrow">One Health · Farmacologia · Tossicologia veterinaria</div>
+          <p class="pill"><span aria-hidden="true">🌿</span> One Health · Farmacologia · Tossicologia veterinaria</p>
           <h1>Prof. Domenico Britti</h1>
-          <p class="lead">
-            Professore ordinario di Farmacologia e Tossicologia Veterinaria presso l’Università “Magna Graecia” di Catanzaro.
-            La mia attività scientifica integra farmacologia veterinaria, tossicologia ambientale, sicurezza dei medicinali,
-            benessere animale e approccio One Health.
+          <p class="hero-text">
+            Professore ordinario di Farmacologia e Tossicologia Veterinaria presso l’Università “Magna Graecia” di Catanzaro. La mia attività scientifica integra farmacologia veterinaria, tossicologia ambientale, sicurezza dei medicinali, benessere animale e approccio One Health.
           </p>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#ricerca">Esplora il mio lavoro →</a>
-            <a class="btn btn-secondary" href="#contatti">Contatti ✉</a>
+          <div class="actions">
+            <a href="#ricerca" class="btn btn-primary">Esplora il mio lavoro <span aria-hidden="true">→</span></a>
+            <a href="#contatti" class="btn btn-secondary">Contatti <span aria-hidden="true">✉</span></a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Ritratto e sintesi scientifica">
-          <img src="foto-profilo.jpg" alt="Ritratto del Prof. Domenico Britti" />
-          <div class="hero-card-body">
-            <strong>Farmaco veterinario, ambiente e One Health</strong>
-            <span>
-              Una prospettiva scientifica integrata sui rapporti tra medicinali veterinari, salute animale, ambiente,
-              sicurezza alimentare e sanità pubblica.
-            </span>
+        <aside class="hero-card" aria-label="Sintesi della pagina">
+          <div class="hero-visual photo-card">
+            <div>
+              <img src="foto-profilo.jpg" alt="Ritratto del Prof. Domenico Britti" class="profile-photo">
+              <strong>Farmaco veterinario, ambiente e One Health</strong>
+              <p>
+                Una prospettiva scientifica integrata sui rapporti tra medicinali veterinari, salute animale, ambiente, sicurezza alimentare e sanità pubblica.
+              </p>
+            </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="profilo">
-      <div class="container">
-        <div class="section-kicker">Profilo</div>
-        <h2>Una traiettoria scientifica tra veterinaria, tossicologia e sanità integrata</h2>
-        <p class="section-intro">
-          L’attività accademica e scientifica si colloca all’intersezione tra farmacologia veterinaria, tossicologia,
-          valutazione del rischio, benessere animale e sistemi di produzione sostenibili.
-        </p>
-
-        <div class="grid-3">
-          <article class="card">
-            <div class="icon">✓</div>
-            <h3>Ruolo accademico</h3>
-            <p>
-              Professore ordinario presso l’Università “Magna Graecia” di Catanzaro, Dipartimento di Medicina
-              Sperimentale e Clinica, settore Farmacologia e Tossicologia Veterinaria.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">◎</div>
-            <h3>Competenze istituzionali</h3>
-            <p>
-              Esperienza in ambito regolatorio, valutazione del benessere animale, farmaco veterinario e applicazione
-              delle normative sulla sperimentazione animale.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">▣</div>
-            <h3>Visione One Health</h3>
-            <p>
-              Il lavoro scientifico è orientato alla relazione tra salute animale, salute umana e ambiente, con particolare
-              attenzione ai contaminanti emergenti e agli impatti sistemici.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="ricerca">
-      <div class="container">
-        <div class="section-kicker">Ricerca</div>
-        <h2>Linee di ricerca e temi di interesse</h2>
-        <p class="section-intro">
-          Un percorso centrato sui rischi tossicologici emergenti, sulla sicurezza dei medicinali veterinari e sulla
-          traduzione delle evidenze scientifiche in strumenti di prevenzione, regolazione e gestione del rischio.
-        </p>
-
-        <div class="grid-2">
-          <article class="card">
-            <h3>Farmacologia e tossicologia dei medicinali veterinari</h3>
-            <p>
-              Studio dei meccanismi d’azione, delle differenze specie-specifiche, della sicurezza d’impiego e delle
-              implicazioni regolatorie dei farmaci veterinari.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Antiparassitari, pesticidi e ambiente</h3>
-            <p>
-              Analisi degli effetti dei composti antiparassitari e pesticidi sugli animali, sugli ecosistemi, sugli
-              organismi non target e sulle filiere produttive.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>One Health e contaminanti emergenti</h3>
-            <p>
-              Approccio integrato allo studio di PFAS, interferenti endocrini, antibiotico-resistenza, residui ambientali
-              e pressioni chimiche negli ambienti agro-zootecnici.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Scienza regolatoria e policy</h3>
-            <p>
-              Traduzione delle evidenze tossicologiche in strumenti decisionali, raccomandazioni di gestione del rischio,
-              etichettatura, autorizzazione e sorveglianza.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="didattica">
-      <div class="container">
-        <div class="section-kicker">Didattica</div>
-        <h2>Formazione universitaria e trasferimento delle conoscenze</h2>
-
-        <div class="card">
-          <h3>Farmacia Veterinaria</h3>
+    <section id="profilo" class="section">
+      <p class="eyebrow">Profilo</p>
+      <h2>Una traiettoria scientifica tra veterinaria, tossicologia e sanità integrata</h2>
+      <div class="grid-3">
+        <article class="card">
+          <div class="iconbox" aria-hidden="true">🎓</div>
+          <h3>Ruolo accademico</h3>
           <p>
-            Un insegnamento pensato per collegare molecole, specie animali, farmacocinetica, farmacodinamica e
-            responsabilità prescrittiva.
+            Professore ordinario presso l’Università “Magna Graecia” di Catanzaro, Dipartimento di Scienze della Salute, settore Farmacologia e Tossicologia Veterinaria.
           </p>
-
-          <ul class="clean-list">
-            <li>Farmaci veterinari e differenze specie-specifiche</li>
-            <li>Farmacocinetica e farmacodinamica comparata</li>
-            <li>Ricetta Elettronica Veterinaria e tracciabilità</li>
-            <li>Uso prudente dei medicinali e sicurezza delle filiere</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="pubblicazioni" class="publications">
-      <div class="container">
-        <div class="section-kicker">Pubblicazioni</div>
-        <h2>Pubblicazioni selezionate</h2>
-        <p class="section-intro">
-          Una selezione di lavori recenti e rappresentativi, distinti tra contributi come primo autore e contributi come
-          ultimo autore / senior author.
-        </p>
-
-        <div class="publication-group">
-          <h3>Primo autore</h3>
-          <ul class="publication-list">
-            <li class="publication-card">
-              <p>
-                Britti D, Marabelli R, Calzetta L.
-                <em>Centripetal Axonal Transport as a Gateway to the CNS for Veterinary Antiparasitics: Bypassing the Blood–Brain Barrier, Clinical Impact in Vulnerable Age Groups, and the Potential Facilitating Role of PFAS.</em>
-                Journal of Toxicology. 2026.
-              </p>
-              <a class="doi" href="https://doi.org/10.1155/jt/1785323" target="_blank" rel="noopener noreferrer">DOI: 10.1155/jt/1785323</a>
-            </li>
-
-            <li class="publication-card">
-              <p>
-                Britti D, Morittu VM, Brosio D, Marabelli R.
-                <em>Animals as Sentinels of Environmental Toxicity in Italy: A Systematic Review of Epidemiological and Ecotoxicological Linkages under a One Health Framework.</em>
-                Veterinaria Italiana. 2026.
-              </p>
-              <a class="doi" href="https://doi.org/10.12834/VetIt.3893.38294.2" target="_blank" rel="noopener noreferrer">DOI: 10.12834/VetIt.3893.38294.2</a>
-            </li>
-
-            <li class="publication-card">
-              <p>
-                Britti D.
-                <em>Molecular Mimicry in the Agroecosystem: A New Paradigm for Understanding How Pesticide Residues Drive the Emergence of Antimicrobial Resistance.</em>
-                Environmental Toxicology and Pharmacology. 2026.
-              </p>
-              <a class="doi" href="https://doi.org/10.1016/j.etap.2026.104974" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.etap.2026.104974</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="publication-group">
-          <h3>Ultimo autore / Senior author</h3>
-          <ul class="publication-list">
-            <li class="publication-card">
-              <p>
-                Bava R, Castagna F, Musella V, Lupia C, Palma E, Britti D.
-                <em>Therapeutic Use of Bee Venom and Potential Applications in Veterinary Medicine.</em>
-                Veterinary Sciences. 2023.
-              </p>
-              <a class="doi" href="https://doi.org/10.3390/vetsci10020119" target="_blank" rel="noopener noreferrer">DOI: 10.3390/vetsci10020119</a>
-            </li>
-
-            <li class="publication-card">
-              <p>
-                Peritore AF, Gugliandolo E, Cuzzocrea S, Crupi R, Britti D.
-                <em>Current Review of Increasing Animal Health Threat of Per- and Polyfluoroalkyl Substances (PFAS): Harms, Limitations, and Alternatives to Manage Their Toxicity.</em>
-                International Journal of Molecular Sciences. 2023;24(14):11707.
-              </p>
-              <a class="doi" href="https://doi.org/10.3390/ijms241411707" target="_blank" rel="noopener noreferrer">DOI: 10.3390/ijms241411707</a>
-            </li>
-
-            <li class="publication-card">
-              <p>
-                Carresi C, Marabelli R, Roncada P, Britti D.
-                <em>Is the Use of Monensin Another Trojan Horse for the Spread of Antimicrobial Resistance?</em>
-                Antibiotics. 2024.
-              </p>
-              <a class="doi" href="https://doi.org/10.3390/antibiotics13020129" target="_blank" rel="noopener noreferrer">DOI: 10.3390/antibiotics13020129</a>
-            </li>
-
-            <li class="publication-card">
-              <p>
-                De Fazio R, Piras C, Britti D.
-                <em>Deltamethrin’s Effect on Nitrogen-Fixing Nodules in Medicago truncatula.</em>
-                Toxics. 2024.
-              </p>
-              <a class="doi" href="https://doi.org/10.3390/toxics12080615" target="_blank" rel="noopener noreferrer">DOI: 10.3390/toxics12080615</a>
-            </li>
-
-            <li class="publication-card">
-              <p>
-                Castagna F, Piras C, Palma E, Musella V, Britti D.
-                <em>Green Veterinary Pharmacology Applied to Parasite Control: Evaluation of Punica granatum, Artemisia campestris, Salix caprea Aqueous Macerates against Gastrointestinal Nematodes of Sheep.</em>
-                Veterinary Sciences. 2021;8(10):237.
-              </p>
-              <a class="doi" href="https://doi.org/10.3390/vetsci8100237" target="_blank" rel="noopener noreferrer">DOI: 10.3390/vetsci8100237</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="progetti">
-      <div class="container">
-        <div class="section-kicker">Progetti</div>
-        <h2>Direzioni progettuali</h2>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Pascolo sostenibile e qualità dei prodotti</h3>
-            <p>
-              Modelli di gestione che riducono la dispersione di sostanze chimiche nei pascoli e valorizzano la qualità
-              sanitaria, ambientale e nutrizionale delle produzioni.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>B.E.A.R.S. e approcci territoriali</h3>
-            <p>
-              Iniziative dedicate al rapporto tra parassitismo, benessere animale, biodiversità, residui ambientali e
-              sostenibilità dei sistemi zootecnici.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Formazione internazionale</h3>
-            <p>
-              Percorsi didattici e culturali orientati alla medicina veterinaria come strumento di cooperazione, cura del
-              creato e dialogo tra Paesi.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contatti">
-      <div class="container">
-        <div class="contact-panel">
-          <div class="section-kicker">Contatti</div>
-          <h2>Per collaborazioni, seminari e progetti scientifici</h2>
+        </article>
+        <article class="card">
+          <div class="iconbox" aria-hidden="true">✓</div>
+          <h3>Competenze istituzionali</h3>
           <p>
-            Per collaborazioni scientifiche, attività seminariali, progetti interdisciplinari e iniziative nell’ambito
-            della farmacologia veterinaria, tossicologia ambientale e One Health.
+            Esperienza in ambito regolatorio, valutazione del benessere animale, farmaco veterinario e applicazione delle normative sulla sperimentazione animale.
           </p>
+        </article>
+        <article class="card">
+          <div class="iconbox" aria-hidden="true">◎</div>
+          <h3>Visione One Health</h3>
+          <p>
+            Il lavoro scientifico è orientato alla relazione tra salute animale, salute umana e ambiente, con particolare attenzione ai contaminanti emergenti e agli impatti sistemici.
+          </p>
+        </article>
+      </div>
+    </section>
 
-          <div class="link-row" aria-label="Link professionali">
-            <a href="https://dmsc.unicz.it/personale/docente/domenicobritti" target="_blank" rel="noopener noreferrer">Profilo universitario</a>
-            <a href="https://orcid.org/0000-0001-7355-8791" target="_blank" rel="noopener noreferrer">ORCID</a>
-            <a href="https://scholar.google.com/citations?hl=it&user=sctxi98AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a href="https://www.sciencedirect.com/author/6701857657/britti-domenico" target="_blank" rel="noopener noreferrer">Scopus / ScienceDirect</a>
-            <a href="https://www.researchgate.net/profile/Domenico-Britti" target="_blank" rel="noopener noreferrer">ResearchGate</a>
-            <a href="https://it.linkedin.com/in/domenico-britti-717a25218" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <section id="ricerca" class="section">
+      <p class="eyebrow">Ricerca</p>
+      <h2>Linee di ricerca e temi di interesse</h2>
+      <div class="grid-2">
+        <article class="card">
+          <div class="iconbox" aria-hidden="true">🔬</div>
+          <h3>Farmacologia e tossicologia dei medicinali veterinari</h3>
+          <p>
+            Studio dei meccanismi d’azione, delle differenze specie-specifiche, della sicurezza d’impiego e delle implicazioni regolatorie dei farmaci veterinari.
+          </p>
+        </article>
+        <article class="card">
+          <div class="iconbox" aria-hidden="true">🌿</div>
+          <h3>Antiparassitari, pesticidi e ambiente</h3>
+          <p>
+            Analisi degli effetti dei composti antiparassitari e pesticidi sugli animali, sugli ecosistemi, sugli organismi non target e sulle filiere produttive.
+          </p>
+        </article>
+        <article class="card">
+          <div class="iconbox" aria-hidden="true">◎</div>
+          <h3>One Health e contaminanti emergenti</h3>
+          <p>
+            Approccio integrato allo studio di PFAS, interferenti endocrini, antibiotico-resistenza, residui ambientali e pressioni chimiche negli ambienti agro-zootecnici.
+          </p>
+        </article>
+        <article class="card">
+          <div class="iconbox" aria-hidden="true">▣</div>
+          <h3>Scienza regolatoria e policy</h3>
+          <p>
+            Traduzione delle evidenze tossicologiche in strumenti decisionali, raccomandazioni di gestione del rischio, etichettatura, autorizzazione e sorveglianza.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="didattica" class="section">
+      <p class="eyebrow">Didattica</p>
+      <h2>Formazione universitaria e trasferimento delle conoscenze</h2>
+      <div class="dark-panel">
+        <div class="dark-grid">
+          <div>
+            <div class="big-icon" style="margin-left:0;background:rgba(16,185,129,0.16);" aria-hidden="true">📘</div>
+            <h3>Farmacia Veterinaria</h3>
+            <p>
+              Un insegnamento pensato per collegare molecole, specie animali, farmacocinetica, farmacodinamica e responsabilità prescrittiva.
+            </p>
           </div>
+          <div class="topic-grid">
+            <div class="topic">Farmaci veterinari e differenze specie-specifiche</div>
+            <div class="topic">Farmacocinetica e farmacodinamica comparata</div>
+            <div class="topic">Ricetta Elettronica Veterinaria e tracciabilità</div>
+            <div class="topic">Uso prudente dei medicinali e sicurezza delle filiere</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pubblicazioni" class="section">
+      <p class="eyebrow">Pubblicazioni</p>
+      <h2>Esempi di produzione scientifica</h2>
+      <div class="publication-list">
+        <article class="publication">
+          <div class="iconbox" aria-hidden="true">▣</div>
+          <div>
+            <div class="publication-title">Therapeutic Use of Bee Venom and Potential Applications in Veterinary Medicine</div>
+            <div class="publication-note">Aggiungere qui rivista, anno, DOI e link alla pubblicazione.</div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="iconbox" aria-hidden="true">▣</div>
+          <div>
+            <div class="publication-title">Deltamethrin’s Effect on Nitrogen-Fixing Nodules in Medicago truncatula</div>
+            <div class="publication-note">Aggiungere qui rivista, anno, DOI e link alla pubblicazione.</div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="iconbox" aria-hidden="true">▣</div>
+          <div>
+            <div class="publication-title">Is the Use of Monensin Another Trojan Horse for the Spread of Antimicrobial Resistance?</div>
+            <div class="publication-note">Aggiungere qui rivista, anno, DOI e link alla pubblicazione.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="progetti" class="section">
+      <p class="eyebrow">Progetti</p>
+      <h2>Direzioni progettuali</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Pascolo sostenibile e qualità dei prodotti</h3>
+          <p>
+            Modelli di gestione che riducono la dispersione di sostanze chimiche nei pascoli e valorizzano la qualità sanitaria, ambientale e nutrizionale delle produzioni.
+          </p>
+        </article>
+        <article class="card">
+          <h3>B.E.A.R.S. e approcci territoriali</h3>
+          <p>
+            Iniziative dedicate al rapporto tra parassitismo, benessere animale, biodiversità, residui ambientali e sostenibilità dei sistemi zootecnici.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Formazione internazionale</h3>
+          <p>
+            Percorsi didattici e culturali orientati alla medicina veterinaria come strumento di cooperazione, cura del creato e dialogo tra Paesi.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contatti" class="contact">
+      <div class="contact-panel">
+        <p class="eyebrow">Contatti</p>
+        <h2>Per collaborazioni, seminari e progetti scientifici</h2>
+        <p class="main">
+          Per collaborazioni scientifiche, attività seminariali, progetti interdisciplinari e iniziative nell’ambito della farmacologia veterinaria, tossicologia ambientale e One Health.
+        </p>
+        <div class="actions" style="justify-content:center;">
+          <a href="mailto:britti@unicz.it" class="btn btn-primary">✉ Scrivimi</a>
+          <a href="https://dmsc.unicz.it/personale/docente/domenicobritti" class="btn btn-secondary" target="_blank" rel="noopener">Profilo universitario</a>
+        </div>
+
+        <div class="profile-links" aria-label="Profili scientifici e professionali">
+          <a class="profile-link" href="https://orcid.org/0000-0001-7355-8791" target="_blank" rel="noopener">ORCID</a>
+          <a class="profile-link" href="https://scholar.google.com/citations?user=sctxi98AAAAJ&hl=it" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="profile-link" href="https://www.sciencedirect.com/author/6701857657/britti-domenico" target="_blank" rel="noopener">Scopus / ScienceDirect</a>
+          <a class="profile-link" href="https://www.researchgate.net/profile/Domenico-Britti" target="_blank" rel="noopener">ResearchGate</a>
+          <a class="profile-link" href="https://www.linkedin.com/in/domenico-britti-717a25218/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-row">
-      <span>© Prof. Domenico Britti. Tutti i diritti riservati.</span>
-      <span>Farmacologia e Tossicologia Veterinaria · One Health</span>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Prof. Domenico Britti. Tutti i diritti riservati.</p>
+      <p>Farmacologia e Tossicologia Veterinaria · One Health</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5dd8b5d1ebad419e9c278f29a8419540"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
