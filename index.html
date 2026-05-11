@@ -385,6 +385,61 @@
     }
 
 
+
+    .article-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .article-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .article-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: #a7f3d0;
+    }
+
+    .article-meta {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .article-card p {
+      color: var(--text);
+      margin-top: 10px;
+    }
+
+    .article-read {
+      margin-top: 22px;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .article-read:hover {
+      color: var(--green-dark);
+    }
+
     .profile-links {
       margin-top: 26px;
       display: flex;
@@ -446,7 +501,7 @@
       .nav-links { display: none; }
       .hero-inner { grid-template-columns: 1fr; padding-top: 64px; }
       .hero-visual { min-height: 330px; }
-      .grid-3, .grid-2, .dark-grid, .topic-grid { grid-template-columns: 1fr; }
+      .grid-3, .grid-2, .dark-grid, .topic-grid, .article-list { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; }
       .contact-panel { padding: 30px 22px; }
     }
@@ -471,6 +526,7 @@
         <a href="#ricerca">Ricerca</a>
         <a href="#didattica">Didattica</a>
         <a href="#pubblicazioni">Pubblicazioni</a>
+        <a href="#articoli">Articoli</a>
         <a href="#progetti">Progetti</a>
         <a href="#contatti">Contatti</a>
       </div>
@@ -615,6 +671,38 @@
             <div class="publication-title">Is the Use of Monensin Another Trojan Horse for the Spread of Antimicrobial Resistance?</div>
             <div class="publication-note">Aggiungere qui rivista, anno, DOI e link alla pubblicazione.</div>
           </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section id="articoli" class="section">
+      <p class="eyebrow">Articoli e commenti</p>
+      <h2>Interventi brevi su farmaco veterinario, ambiente e One Health</h2>
+      <div class="article-list">
+        <article class="article-card">
+          <div>
+            <span class="article-meta">Commento scientifico</span>
+            <h3>Il farmaco veterinario come interfaccia One Health</h3>
+            <p>Una nota sul ruolo del medicinale veterinario come punto di connessione tra salute animale, sicurezza alimentare, ambiente e sanità pubblica.</p>
+          </div>
+          <a class="article-read" href="articoli/farmaco-veterinario-one-health.html">Leggi l’articolo →</a>
+        </article>
+        <article class="article-card">
+          <div>
+            <span class="article-meta">Nota One Health</span>
+            <h3>Pesticidi, animali sentinella e salute ambientale</h3>
+            <p>Una riflessione sul valore degli animali domestici e da reddito come indicatori precoci della pressione chimica negli ambienti condivisi.</p>
+          </div>
+          <a class="article-read" href="articoli/pesticidi-animali-sentinella.html">Leggi l’articolo →</a>
+        </article>
+        <article class="article-card">
+          <div>
+            <span class="article-meta">Commento regolatorio</span>
+            <h3>PFAS e sicurezza regolatoria: una frontiera aperta</h3>
+            <p>Una breve nota sul bisogno di collegare chimica dei materiali, formulazioni, contaminanti emergenti e valutazione del rischio.</p>
+          </div>
+          <a class="article-read" href="articoli/pfas-sicurezza-regolatoria.html">Leggi l’articolo →</a>
         </article>
       </div>
     </section>
